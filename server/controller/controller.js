@@ -65,3 +65,29 @@ exports.find = (req, res) => {
       });
   }
 };
+
+//update a user by id
+exports.update = (req, res) => {
+  if (!req.body) {
+    return res
+      .status(400)
+      .send({ messaeg: "Data yang diisi tidak boleh kosong" });
+  }
+
+  const id = req.params.id;
+  Userdb.findByIdAndUpdate(id, req.body)
+    .then((data) => {
+      if (!data) {
+        res
+          .status(404)
+          .send({ message: `Update data dari user dengan id ${id} gagal` });
+      } else {
+        res.send(data);
+      }
+    })
+    .catch((err) => {
+      res
+        .status(500)
+        .send({ message: "Terjadi kesalahan dalam mengubah data user" });
+    });
+};
