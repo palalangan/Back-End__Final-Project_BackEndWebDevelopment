@@ -91,3 +91,25 @@ exports.update = (req, res) => {
         .send({ message: "Terjadi kesalahan dalam mengubah data user" });
     });
 };
+//delete a user by id
+exports.delete = (req, res) => {
+  const id = req.params.id;
+
+  Userdb.findByIdAndDelete(id)
+    .then((data) => {
+      if (!data) {
+        res
+          .status(404)
+          .send({ message: `Update data dari user dengan id ${id} gagal` });
+      } else {
+        res.send({
+          message: "Data berhasil dihapus",
+        });
+      }
+    })
+    .catch((err) => {
+      res.status(500).send({
+        message: "Gagal mengahapus data dengan id = " + id,
+      });
+    });
+};
