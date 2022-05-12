@@ -1,0 +1,64 @@
+ <!-- form handling-->
+ <form action="/api/users" method="POST" id="add_user">
+    <div class="new_user">
+        <div class="form-group">
+            <label for="name" class="text-light">Name</label>
+            <input type="hidden" name="id" value="">
+            <input type="text" name="name" value="" placeholder="Masukkan nama anda disini">
+        </div>
+        <div class="form-group">
+            <label for="password" class="text-light">Password</label>
+            <input type="text" name="password" value="" placeholder="Masukkan password anda disini">
+        </div>
+        <div class="form-group">
+            <label for="age" class="text-light">Age</label>
+            <input type="text" name="age" value="" placeholder="Masukkan umur anda disini">
+        </div>
+        <div class="form-group">
+        <div class="form-group">
+            <label for="team" class="text-light">Team</label>
+            <input type="text" name="team" value="" placeholder="Masukkan nama team anda disini">
+        </div>
+        <div class="form-group">
+            <label for="game" class="text-light">Game</label>
+            <div class="radio inline">
+                <input type="radio" id="radio-2" name="game" value="Dota2">  
+                <label for="radio-2" class="radio-label">Dota2</label>                              
+            </div>
+            <div class="radio inline">
+                <input type="radio" id="radio-3" name="game" value="VALORANT">  
+                <label for="radio-3" class="radio-label">VALORANT</label>                              
+            </div>
+            <div class="radio inline">
+                <input type="radio" id="radio-4" name="game" value="Apex Legends">  
+                <label for="radio-4" class="radio-label">Apex Legends</label>                              
+            </div>
+            <div class="radio inline">
+                <input type="radio" id="radio-5" name="game" value="PUBG">  
+                <label for="radio-5" class="radio-label">PUBG</label>                              
+            </div>
+            <div class="radio inline">
+                <input type="radio" id="radio-6" name="game" value="CSGO">  
+                <label for="radio-6" class="radio-label">CSGO</label>                              
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="status" class="text-light">Status</label>
+            <div class="radio inline">
+                <input type="radio" id="radio-7" name="status" value="Coach">  
+                <label for="radio-7" class="radio-label">Coach</label>                              
+            </div>
+            <div class="radio inline">
+                <input type="radio" id="radio-8" name="status" value="Captain">  
+                <label for="radio-8" class="radio-label">Captain</label>                              
+            </div>
+            <div class="radio inline">
+                <input type="radio" id="radio-9" name="status" value="Member">  
+                <label for="radio-9" class="radio-label">Member</label>                              
+            </div>
+        </div>
+        <div class="form-group">
+            <button type="submit" class="btn text-dark update">Save</button>
+        </div>
+    </div>
+</form>
